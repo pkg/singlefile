@@ -15,7 +15,7 @@ func lock(key string) (func() error, error) {
 		return nil, err
 	}
 	addr := net.TCPAddr{
-		IP:   net.IP{127, 0, 0, 127},
+		IP:   net.IP{127, 0, 0, 1},
 		Port: port,
 	}
 	l, err := net.ListenTCP("tcp4", &addr)
